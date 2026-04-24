@@ -26,7 +26,10 @@ const Home = () => {
     }
 
     try {
-      const apiUrl = import.meta.env.VITE_API_URL || 'http://localhost:3000/bfhl';
+      let apiUrl = import.meta.env.VITE_API_URL || 'http://localhost:3000/bfhl';
+      if (!apiUrl.endsWith('/bfhl')) {
+        apiUrl = apiUrl.replace(/\/$/, '') + '/bfhl';
+      }
       const response = await fetch(apiUrl, {
         method: 'POST',
         headers: {
