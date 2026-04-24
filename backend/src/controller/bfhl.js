@@ -17,9 +17,9 @@ const processGraph = (req, res) => {
 
     // 3. Construct final response
     const response = {
-      user_id: "john_doe_17091999", // Replace with desired fullname_ddmmyyyy
-      email_id: "john@college.edu",
-      college_roll_number: "ABCD123",
+      user_id: "Abhinav_S_30112005", // Replace with desired fullname_ddmmyyyy
+      email_id: "as9477@srmist.edu.in",
+      college_roll_number: "RA2311030020011",
       hierarchies,
       invalid_entries,
       duplicate_edges,
