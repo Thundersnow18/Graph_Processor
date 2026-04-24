@@ -6,8 +6,8 @@
 
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  background-color: #f4f7f6;
-  color: #333;
+  background-color: #f5f5f5;
+  color: #111;
   line-height: 1.6;
 }
 
@@ -16,8 +16,8 @@ body {
   margin: 2rem auto;
   padding: 2rem;
   background-color: #fff;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  border: 1px solid #ccc;
 }
 
 header {
@@ -26,7 +26,7 @@ header {
 }
 
 h1 {
-  color: #2c3e50;
+  color: #000;
   margin-bottom: 0.5rem;
 }
 
@@ -43,51 +43,54 @@ label {
 textarea {
   width: 100%;
   padding: 0.75rem;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+  border: 1px solid #999;
+  border-radius: 2px;
   font-family: monospace;
   font-size: 14px;
   resize: vertical;
 }
 
 button {
-  background-color: #3498db;
+  background-color: #333;
   color: #fff;
-  border: none;
+  border: 1px solid #111;
   padding: 0.75rem 1.5rem;
   font-size: 16px;
-  border-radius: 4px;
+  border-radius: 2px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
 }
 
 button:hover {
-  background-color: #2980b9;
+  background-color: #000;
 }
 
 button:disabled {
-  background-color: #95a5a6;
+  background-color: #ccc;
+  color: #666;
   cursor: not-allowed;
+  border-color: #999;
 }
 
 .error-message {
-  color: #e74c3c;
-  background-color: #fce4e4;
+  color: #000;
+  background-color: #e0e0e0;
   padding: 0.75rem;
-  border-radius: 4px;
+  border: 1px solid #666;
+  border-radius: 2px;
   margin-bottom: 1rem;
+  font-weight: bold;
 }
 
 .results-section {
   margin-top: 2rem;
-  border-top: 1px solid #eee;
+  border-top: 1px solid #ccc;
   padding-top: 1.5rem;
 }
 
 .card {
-  background-color: #f9f9f9;
-  border: 1px solid #e0e0e0;
-  border-radius: 4px;
+  background-color: #fafafa;
+  border: 1px solid #ccc;
+  border-radius: 2px;
   padding: 1rem;
   margin-bottom: 1rem;
 }
@@ -96,16 +99,17 @@ button:disabled {
   margin-top: 0;
   margin-bottom: 0.5rem;
   font-size: 1.1rem;
-  color: #2c3e50;
-  border-bottom: 1px solid #e0e0e0;
+  color: #000;
+  border-bottom: 1px solid #ccc;
   padding-bottom: 0.5rem;
 }
 
 .tree-view pre {
-  background-color: #2d2d2d;
-  color: #ccc;
+  background-color: #f0f0f0;
+  color: #000;
   padding: 1rem;
-  border-radius: 4px;
+  border: 1px solid #ccc;
+  border-radius: 2px;
   overflow-x: auto;
   font-size: 14px;
 }
@@ -117,21 +121,23 @@ button:disabled {
 }
 
 .badge {
-  background-color: #e0e0e0;
+  background-color: #fff;
   padding: 0.25rem 0.5rem;
-  border-radius: 4px;
+  border: 1px solid #666;
+  border-radius: 2px;
   font-size: 14px;
   font-family: monospace;
+  color: #000;
 }
 
 .badge.invalid {
-  background-color: #fce4e4;
-  color: #e74c3c;
+  background-color: #ddd;
+  text-decoration: line-through;
 }
 
 .badge.duplicate {
-  background-color: #fff3cd;
-  color: #856404;
+  background-color: #eee;
+  font-style: italic;
 }
 
 .summary-grid {
@@ -141,9 +147,10 @@ button:disabled {
 }
 
 .summary-item {
-  background-color: #e8f4f8;
+  background-color: #fafafa;
   padding: 1rem;
-  border-radius: 4px;
+  border: 1px solid #ccc;
+  border-radius: 2px;
   text-align: center;
 }
 
@@ -151,10 +158,10 @@ button:disabled {
   display: block;
   font-size: 1.5rem;
   font-weight: bold;
-  color: #2980b9;
+  color: #000;
 }
 
 .summary-label {
   font-size: 0.9rem;
-  color: #555;
+  color: #333;
 }
