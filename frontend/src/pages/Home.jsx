@@ -51,7 +51,7 @@ const Home = () => {
   return (
     <div className="container">
       <header>
-        <h1>BFHL Graph Processor</h1>
+        <h1>Graph Processor</h1>
         <p>Enter a JSON array of directed edges (e.g., ["A-&gt;B"])</p>
       </header>
 
