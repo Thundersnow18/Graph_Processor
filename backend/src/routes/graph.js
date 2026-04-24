@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const { processGraph } = require('../controller/bfhl');
+const { processGraph } = require('../controller/graph');
 
 router.post('/', processGraph);
 
