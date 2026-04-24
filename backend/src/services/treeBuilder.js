@@ -75,51 +75,7 @@ const buildHierarchies = (valid_edges) => {
     }
   }
 
-  // Find components with cycles (unvisited nodes)
-  const unvisited = [];
-  for (let node of allNodes) {
-    if (!visited.has(node)) {
-      unvisited.push(node);
-    }
-  }
-  unvisited.sort();
-
-  for (let node of unvisited) {
-    if (visited.has(node)) continue;
-
-    // This node belongs to a new cyclic component
-    // Find all nodes in this component by BFS/DFS to mark them visited
-    const compNodes = [];
-    const q = [node];
-    visited.add(node);
-    compNodes.push(node);
-
-    let head = 0;
-    while (head < q.length) {
-      const curr = q[head++];
-      // Traverse outgoing
-      const children = adj.get(curr) || [];
-      for (let child of children) {
-        if (!visited.has(child)) {
-          visited.add(child);
-          q.push(child);
-          compNodes.push(child);
-        }
-      }
-      // Also need to traverse incoming to find the full component if we were to be fully general, 
-      // but since in-degree is 1, a directed cycle with branches will all be reachable if we just follow the cycle.
-      // Wait, what if we started BFS from a branch node? We wouldn't reach the cycle!
-      // But we sort `unvisited`. So we might pick a branch node first.
-      // Let's do an undirected BFS to mark the entire weakly connected component.
-    }
-  }
-
-  // Better approach for finding components: Undirected BFS
-  const visitedForCycles = new Set(roots); // Roots and their trees are already fully visited
-  for (let node of roots) {
-      // roots already visited in directed traversal, but to be safe we use the `visited` set
-  }
-  
+  // Find components with cycles: Undirected BFS
   const unvisitedNodes = Array.from(allNodes).filter(n => !visited.has(n));
   
   // Build undirected adj for component finding
